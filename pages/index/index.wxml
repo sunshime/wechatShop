@@ -1,0 +1,10 @@
+<!--index.wxml 首页-->
+<view class="container">
+  <view class="top">
+    <view class="addr">
+      <text>当前地址：</text>
+      <text>{{address}}</text>
+    </view>
+    <view class="icon"></view>
+  </view>
+</view>
