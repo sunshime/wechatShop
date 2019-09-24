@@ -1,1 +1,45 @@
 /* pages/topic/topic.wxss */
+
+.item {
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.item .imgs {
+  height: 415rpx;
+  width: 100%;
+}
+
+.item .imgs image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.texts {
+  padding-top: 30rpx;
+}
+
+.texts text {
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.texts .titles {
+  font-size: 35rpx;
+}
+
+.texts .sub-titles {
+  color: #999;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  padding-top: 16rpx;
+}
+
+.texts .price {
+  font-size: 27rpx;
+  color: #b4282d;
+  padding: 20rpx 20rpx;
+}

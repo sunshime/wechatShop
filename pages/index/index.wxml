@@ -1,6 +1,6 @@
 <!--index.wxml 首页-->
 <view class="container">
-  <!-- <view class="toppages">
+  <view class="toppages">
     <view class="addr">
       <text>当前地址：</text>
       <text>{{address}}</text>
@@ -8,7 +8,7 @@
     <view class="icon">
       <image src="../../images/search.png"></image>
     </view>
-  </view> -->
+  </view>
   <swiper class="swiper" indicator-dots="true" autoplay="true}" interval="3000" circular="true" duration="500">
     <block wx:for="{{banner}}" wx:for-index="index" wx:for-item="item" wx:key="index">
       <swiper-item class="swiper-item">

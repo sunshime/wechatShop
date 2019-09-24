@@ -1,2 +1,13 @@
 <!--pages/topic/topic.wxml-->
-<text>pages/topic/topic.wxml</text>
+<view class="topic">
+  <view class="item" wx:for="{{topicList}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}">
+    <view class="imgs">
+      <image src="{{item.scene_pic_url}}"></image>
+    </view>
+    <view class="texts">
+      <text class="titles">{{item.title}}</text>
+      <text class="sub-titles">{{item.subtitle}}</text>
+      <text class="price">￥{{item.price_info}}</text>
+    </view>
+  </view>
+</view>
