@@ -117,21 +117,32 @@
     </view>
   </view>
 
-  <view class="tips-icon" bindtap="concatNew">
+
+
+  <!-- 解决遮罩层的滚动穿透问题 示例 -->
+  <!-- <view class="tips-icon" bindtap="concatNew">
     <image src="../../images/home.png"></image>
   </view>
-  <view class="tipsss" catchtap="inow" data-id="1" wx:if="{{status}}" catchtouchmove="{{true}}">
-    <view class="tips" catchtap="inow" data-id="2">
-      <text class="title">欢迎</text>
-      <view class="tips-body">
-        <view class="item">
-          <text>我的CSDN地址：</text>
-          <text class="phone adr" bindtap='copyText' data-text="{{contents}}">https://blog.csdn.net/LiaoFengJi</text>
-        </view>
+
+  <view class="tipsss" wx:if="{{status}}" catchtouchmove="{{true}}" catchtap="inow" data-id="1"></view>
+  <view class="tips" catchtap="inow" data-id="2" wx:if="{{status}}">
+    <text class="title">欢迎</text>
+    <view class="tips-body">
+      <view class="text">
+        <text>121211</text>
+        <text>1212112</text>
+        <text>1212113</text>
+        <text>1212114</text>
+        <text>1212115</text>
+        <text>1212116</text>
+        <text>1212117</text>
+        <text>1212118</text>
+        <text>1212119</text>
+        <text>12121110</text>
+        <text>12121111</text>
       </view>
     </view>
-  </view>
-
+  </view> -->
 
 
 </view>

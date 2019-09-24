@@ -378,6 +378,7 @@
   font-size: 33rpx;
   text-align: center;
   display: block;
+  padding-top: 100rpx;
 }
 
 .items .more-img {
@@ -392,11 +393,15 @@
   height: 100%;
 }
 
-.tips-icon {
+
+
+
+/*  解决遮罩层的滚动穿透问题 示例 */
+/* .tips-icon {
   position: fixed;
   right: 0;
   bottom: 100rpx;
-  width: 112rpx;
+  width: 105rpx;
   height: 100rpx;
 }
 
@@ -406,81 +411,38 @@
 }
 
 .tipsss {
-  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-
-.hiddenScroll {
-  height: 100%;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .tips {
-  width: 600rpx;
-  height: 400rpx;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 8rpx;
-  position: absolute;
-  bottom: 433rpx;
-  left: 75rpx;
-  overflow: scroll;
+  width: 560rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 300rpx;
+  left: 95rpx;
 }
 
+
 .tips .title {
-  font-size: 36rpx;
-  font-family: PingFangSC-Medium, PingFangSC;
-  font-weight: bold;
-  color: rgba(51, 51, 51, 1);
-  line-height: 130rpx;
+  line-height: 60rpx;
   text-align: center;
+  font-weight: bold;
   display: block;
+  border-bottom: 1rpx solid #8c9bae;
 }
 
 .tips-body {
-  padding-left: 123rpx;
+  height: 320rpx;
+  overflow: scroll;
 }
 
-.tips-body .item {
-  font-size: 30rpx;
-  font-family: PingFangSC-Regular, PingFangSC;
-  font-weight: 400;
-  color: rgba(102, 102, 102, 1);
-  line-height: 42rpx;
-}
-
-.tips-body  .phone {
-  padding-left: 20rpx;
-  color: #4a90e2;
-  text-decoration: underline;
-}
-
-.tips-body .middle {
-  padding-top: 40rpx;
-  padding-bottom: 42rpx;
-}
-
-.tips-body .adr {
-  color: #666;
-  text-decoration: none;
-  padding-left: 20rpx;
-}
-
-.itemss {
-  width: 100%;
-  font-size: 30rpx;
-  font-family: PingFangSC-Regular, PingFangSC;
-  font-weight: 400;
-  color: rgba(74, 144, 226, 1);
-  line-height: 118rpx;
-  margin-top: 33rpx;
-  text-align: center;
-}
-
-.heigs text{
+.tips-body .text text {
   display: block;
-}
+  text-align: center;
+  line-height: 90rpx;
+} */
