@@ -1,10 +1,137 @@
 <!--index.wxml 首页-->
 <view class="container">
-  <view class="top">
+  <!-- <view class="toppages">
     <view class="addr">
       <text>当前地址：</text>
       <text>{{address}}</text>
     </view>
-    <view class="icon"></view>
+    <view class="icon">
+      <image src="../../images/search.png"></image>
+    </view>
+  </view> -->
+  <swiper class="swiper" indicator-dots="true" autoplay="true}" interval="3000" circular="true" duration="500">
+    <block wx:for="{{banner}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="nav">
+    <view class="item" wx:for="{{channel}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="img">
+        <image src="{{item.icon_url}}"></image>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
   </view>
+  <view class="brand">
+    <text class="title">品牌制造商直供</text>
+    <view class="br-body">
+      <view class="br-item" wx:for="{{brandList}}" wx:for-index="index" wx:key="{{index}}">
+        <view class="texts">
+          <text>{{item.name}}</text>
+          <text>{{item.floor_price}}元起</text>
+        </view>
+        <image src="{{item.new_pic_url}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="new">
+    <text>新品首发</text>
+    <view class="see-all">查看全部</view>
+  </view>
+  <view class="new-goods">
+    <scroll-view class="scroll-view" scroll-x style="width: 100%">
+      <view wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" id="{{item.id}}" class="scroll-view-item">
+        <view class="img">
+          <image src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="text">
+          <text class="name">{{item.name}}</text>
+          <text class="brief">{{item.goods_brief}}</text>
+          <text class="price">￥{{item.retail_price}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="new good">
+    <text>人气推荐，好物精选</text>
+    <view class="see-all">查看全部</view>
+  </view>
+  <view class="new-goods">
+    <scroll-view class="scroll-view" scroll-x style="width: 100%">
+      <view wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" id="{{item.id}}" class="scroll-view-item">
+        <view class="img">
+          <image src="{{item.list_pic_url}}"></image>
+        </view>
+        <view class="text">
+          <text class="name">{{item.name}}</text>
+          <text class="brief">{{item.goods_brief}}</text>
+          <text class="price">￥{{item.retail_price}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="feature">
+    <view class="title">
+      <text>专题精选</text>
+      <view class="icon"></view>
+    </view>
+    <view class="ft-body">
+      <scroll-view class="scroll-views" scroll-x style="width: 100%">
+        <view wx:for="{{topicList}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}" id="{{item.id}}" class="scroll-view-items">
+          <view class="img">
+            <image src="{{item.item_pic_url}}"></image>
+          </view>
+          <view class="text">
+            <view class="title-text">
+              <text class="name">{{item.title}}</text>
+              <text class="price">{{item.price_info}}元起</text>
+            </view>
+            <text class="subtitle">{{item.subtitle}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="categorys">
+    <view class="cates" wx:for="{{newCategoryList}}" wx:for-index="index" wx:for-item="item" wx:key="{{index}}">
+      <text class="cates-title">{{item.name}}好物</text>
+      <view class="cates-body">
+        <view wx:for="{{item.goodsList}}" wx:for-index="indexs" wx:for-item="items" wx:key="{{indexs}}" class="items">
+          <view class="items-img">
+            <image src="{{items.list_pic_url}}"></image>
+          </view>
+          <view class="items-text">
+            <text>{{items.name}}</text>
+            <text>￥{{items.retail_price}}</text>
+          </view>
+        </view>
+        <view class="items">
+          <text class="titles">{{item.name}}好物</text>
+          <view class="more-img">
+            <image src="../../images/icon_go_more.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="tips-icon" bindtap="concatNew">
+    <image src="../../images/home.png"></image>
+  </view>
+  <view class="tipsss" catchtap="inow" data-id="1" wx:if="{{status}}" catchtouchmove="{{true}}">
+    <view class="tips" catchtap="inow" data-id="2">
+      <text class="title">欢迎</text>
+      <view class="tips-body">
+        <view class="item">
+          <text>我的CSDN地址：</text>
+          <text class="phone adr" bindtap='copyText' data-text="{{contents}}">https://blog.csdn.net/LiaoFengJi</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
 </view>
