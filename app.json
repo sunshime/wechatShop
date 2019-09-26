@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/cart/cart",
     "pages/category/category",
     "pages/topic/topic",
     "pages/index/index",
-    "pages/cart/cart",
     "pages/my/my"
   ],
   "window": {
@@ -16,6 +16,8 @@
   
   "tabBar": {
     "selectedColor": "#b4282d",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",

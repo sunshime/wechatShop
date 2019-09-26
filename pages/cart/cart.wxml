@@ -1,2 +1,45 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cart">
+  <view class="top">
+    <view class="top-item" wx:for="{{presentList}}" wx:key="{{index}}">
+      <view class="top-cril"></view>
+      <text class="top-txt">{{item}}</text>
+    </view>
+  </view>
+  <view class="body">
+    <scroll-view scroll-y>
+      <block wx:for="{{cartList}}" wx:key="{{index}}">
+          <view class="list-item">
+            <view class="item-top">
+              <view class="it-left">
+                <view class="tl-check"></view>
+                <view class="tl-imgs">
+                  <image src="{{item.list_pic_url}}"></image>
+                </view>
+                <view class="tl-txt">
+                  <text class="txt-txt">{{item.goods_name}}</text>
+                  <text>￥{{item.retail_price}}</text>
+                </view>
+              </view>
+              <view class="it-right">
+                <text class="rt-handle reduce">-</text>
+                <text class="rt-handle rt-price">145</text>
+                <text class="rt-handle add">+</text>
+              </view>
+            </view>
+             <view class="list-del">删除</view>
+          </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="bottom">
+    <view class="bt-left">
+      <view class="btl-check tl-check"></view>
+      <view class="btl-check-all">
+        <view class="btlc-all">全选(0)</view>
+        <view class="btlc-price">￥0</view>
+      </view>
+    </view>
+    <view class="bt-right">下单</view>
+  </view>
+</view>

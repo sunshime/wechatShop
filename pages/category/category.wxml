@@ -19,22 +19,25 @@
     <!-- right -->
     <view class="goods-right">
       <scroll-view class="goods-body" scroll-y="true" scroll-into-view="{{itemScrollId}}" scroll-with-animation="true">
-        <view class="rt-items" wx:for="{{categoryRightList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}" bindscroll="foodListScrolling">
-          <view class="rt-img">
-            <image src="{{item.banner_url}}"></image>
-          </view>
-          <view class="rt-title">
-            <text class="rt-line"></text>
-            <text class="rt-txt">{{item.name}}分类</text>
-            <text class="rt-line"></text>
-          </view>
-          <view class="categorylist">
-            <view class="ct-item" wx:for="{{item.subList}}" wx:for-item="items" wx:for-index="indexs" wx:key="{{indexs}}">
-              <image class="ct-img" src="{{items.wap_banner_url}}"></image>
-              <text class="ct-txt">{{items.name}}</text>
+
+        <block wx:for="{{categoryRightList}}" wx:for-item="item" wx:for-index="index" wx:key="{{index}}" >
+          <view class="rt-items" bindscroll="foodListScrolling">
+            <view class="rt-img">
+              <image src="{{item.banner_url}}"></image>
+            </view>
+            <view class="rt-title">
+              <text class="rt-line"></text>
+              <text class="rt-txt">{{item.name}}分类</text>
+              <text class="rt-line"></text>
+            </view>
+            <view class="categorylist">
+              <view class="ct-item" wx:for="{{item.subList}}" wx:for-item="items" wx:for-index="indexs" wx:key="{{indexs}}">
+                <image class="ct-img" src="{{items.wap_banner_url}}"></image>
+                <text class="ct-txt">{{items.name}}</text>
+              </view>
             </view>
           </view>
-        </view>
+        </block>
       </scroll-view>
     </view>
   </view>
