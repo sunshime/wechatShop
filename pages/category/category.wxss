@@ -1,1 +1,142 @@
 /* pages/category/category.wxss */
+
+.categorys {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.toppages {
+  height: 65rpx;
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-left: 30rpx;
+  padding-right: 50rpx;
+  z-index: 100;
+  /* background-color: #efefef; */
+  border-bottom: 1rpx solid #efefef;
+}
+
+.addr {
+  font-size: 24rpx;
+  line-height: 65rpx;
+  width: 600rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 30rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -2rpx;
+}
+
+.goods {
+  flex: 1;
+  display: flex;
+}
+
+.goods-left {
+  width: 170rpx;
+  height: 100%;
+  border-right: 1rpx solid #efefef;
+}
+
+.goods-left .nochecked {
+  /* padding-left: 30rpx; */
+  text-align: center;
+  line-height: 90rpx;
+  width: 100%;
+  height: 90rpx;
+  color: #333;
+  font-size: 28rpx;
+  border-left: 6rpx solid #fff;
+  display: block;
+}
+
+.goods-left .checked {
+  border-left: 6rpx solid rgb(245, 121, 121);
+  color: #ab2b2b;
+  font-size: 36rpx;
+}
+
+.goods-right {
+  flex: 1;
+  /* background-color: #f0f0f0; */
+  background-color: #fff;
+  padding: 0 30rpx;
+  height: 100%;
+}
+.goods-body{
+  height: 100%;
+  width: 100%;  
+}
+.rt-img {
+  width: 100%;
+  height: 222rpx;
+  margin-top: 20rpx;
+}
+
+.rt-img image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.rt-title {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.rt-line {
+  display: block;
+  height: 3rpx;
+  width: 60rpx;
+  background-color: #ccc;
+}
+
+.rt-txt {
+  display: block;
+  text-align: center;
+  padding: 50rpx 20rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.categorylist {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.ct-item {
+  width: 33.3%;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+
+.ct-img {
+  height: 144rpx;
+  width: 144rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.ct-txt{
+  font-size: 28rpx;
+  color: #333;
+}

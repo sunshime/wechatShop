@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     status:true,
-    address: "天河区海珠区dsflkjdsaflkdjsflkdsj打扫房间达萨罗看风景阿萨德咖啡机",
+    
     banner: [
       "https://yanxuan.nosdn.127.net/baea18aa59217cabd190b19fc1cf1617.jpg?imageView&quality=75&thumbnail=750x0", "https://yanxuan.nosdn.127.net/d5683f01e132851229be21c52d808b62.jpg?imageView&quality=75&thumbnail=750x0", "https://yanxuan.nosdn.127.net/af7d906e174cb160ab5a979310aa223d.jpg?imageView&quality=75&thumbnail=750x0"
     ],
